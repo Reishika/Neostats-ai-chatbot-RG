@@ -6,7 +6,7 @@ from langchain_openai import AzureOpenAIEmbeddings
 from openai import AzureOpenAI
 
 load_dotenv()
-client = TavilyClient(api_key="TAVILY_KEY")  # Replace with your actual Tavily API key
+client = TavilyClient(api_key=os.getenv("TAVILY_KEY"))# Replace with your actual Tavily API key
 
 
 llm = AzureChatOpenAI(
