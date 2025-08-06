@@ -16,3 +16,4 @@ azure-cognitiveservices-speech
 azure-search-documents
 azure-core
 tavily-python
+markdown
