@@ -216,10 +216,7 @@ if user_input:
                 classification["response_class"] == "negative"
                 and classification["is_relevant"] == "yes"
             ):
-                bot_reply = answer_with_web_search.invoke({
-                    "query": user_input,
-                    "mode": response_mode.lower()
-                })
+                bot_reply = answer_with_web_search(user_input,mode= response_mode.lower())
                 response_source = "Web Search"
 
                 if not bot_reply:
