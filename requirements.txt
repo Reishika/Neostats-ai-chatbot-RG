@@ -15,4 +15,4 @@ python-dotenv
 azure-cognitiveservices-speech
 azure-search-documents
 azure-core
-tavily
+tavily-python
