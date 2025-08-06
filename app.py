@@ -155,20 +155,6 @@ for msg in st.session_state.chat_history:
 response_mode = st.radio("Response Mode", ["Concise", "Detailed"], horizontal=True)
 
 
-# --- Inject custom CSS to place mic beside input ---
-st.markdown("""
-    <style>
-        
-        .mic-button {
-            background-color: #f0f0f0;
-            padding: 0rem 1rem;
-            border-radius: 2px;
-            border: none;
-            cursor: pointer;
-
-        }
-    </style>
-""", unsafe_allow_html=True)
 
 # --- Place custom HTML wrapper ---
 st.markdown('<div class="chat-input-container">', unsafe_allow_html=True)
@@ -176,19 +162,6 @@ st.markdown('<div class="chat-input-container">', unsafe_allow_html=True)
 # --- Chat Input ---
 user_input = st.chat_input("Type your message here...")
 
-# --- Mic Button using JavaScript trigger ---
-col1, col2 = st.columns([10, 1])
-with col2:
-    if st.button("🎤", key="mic_button"):
-        st.session_state.is_recording = True
-        with st.spinner("🎙️ Recording... Speak now"):
-            query = transcribe_speech_from_mic(AZURE_SPEECH_KEY, AZURE_REGION)
-            st.session_state.user_query = query
-        st.session_state.is_recording = False
-
-st.markdown('</div>', unsafe_allow_html=True)
-
-user_input = query if 'query' in locals() else user_input
 st.markdown('</div>', unsafe_allow_html=True)
 
 # --- Handle user input ---
