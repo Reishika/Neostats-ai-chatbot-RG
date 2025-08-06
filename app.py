@@ -104,10 +104,16 @@ if "chat_history" not in st.session_state:
 
 from utils.azure_speech_to_text import transcribe_speech_from_mic
 
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
+
+AZURE_SPEECH_KEY= os.getenv("AZURE_SPEECH_KEY")  # Ensure
+AZURE_REGION= os.getenv("AZURE_REGION")  # Ensure this is set in your .env file
 
 # Optional: Get keys from environment or secrets
-AZURE_SPEECH_KEY = "B0gnCpS51yged1LJwzsgnBrddWukdOZeGuAE9ZklJiC01OOiv3kxJQQJ99BHAC5RqLJXJ3w3AAAEACOGJLSN"
-AZURE_REGION = "westeurope"
+
 
 # Call the function when needed
 
