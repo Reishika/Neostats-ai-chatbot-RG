@@ -17,3 +17,4 @@ azure-search-documents
 azure-core
 tavily-python
 markdown
+rapidfuzz
