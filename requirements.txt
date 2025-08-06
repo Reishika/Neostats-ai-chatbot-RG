@@ -7,7 +7,7 @@ numpy
 openai
 langchain-core
 requests
-pydantic==2.7.5
+pydantic==2.11.7
 langchain>=0.2.7,<0.3.0
 langchain-openai<0.2.0
 langchain-community<0.3
