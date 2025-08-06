@@ -1,7 +1,6 @@
 from config.config import client, openai_client  # Azure OpenAI client assumed configured here
 from langchain_core.tools import tool
 
-@tool
 def answer_with_web_search(query: str, mode: str) -> str:
     """
     Executes a web search using Tavily and returns a concise or detailed response using Azure OpenAI.
