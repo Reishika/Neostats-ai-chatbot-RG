@@ -19,7 +19,7 @@ You are a strict classifier.
 Given the chatbot's response and the user's original query, perform the following:
 
 1. **Classify the bot response** as either:
-   - **"positive"**: The response is helpful, informative, complete, and contains **no uncertain, incomplete, or negative language**.
+   - **"positive"**: The response is helpful, informative, detailed for any medishield policy, complete, and contains **no uncertain, incomplete, or negative language**.
    - **"negative"**: The response is vague with negative intend, says "I don't know", "not found", "no information", or anything indicating **lack of knowledge, inability to help, or misalignment with the query**.
 
    Examples of negative indicators include:
