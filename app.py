@@ -32,9 +32,9 @@ st.markdown(f"""
 # ---- Fixed Header ----
 st.markdown("""
     <div class="fixed-header" style="text-align: center;">
-        <h3 class="neon-label">🧠 Smart Chat Assistant</h3> 
+        <h3 class="neon-label">	📋 PolicyPath Assistant</h3> 
         <p class="neon-label" style="font-size: 0.9em; margin-top: 0.1em;">
-            Switch between Insurance Assistant & General Web Assistant
+            Easily find your perfect MediShield policy – now with smart web search support
         </p>
     </div>
 """, unsafe_allow_html=True)
