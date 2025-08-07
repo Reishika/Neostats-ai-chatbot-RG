@@ -74,7 +74,7 @@ def extract_chunks_with_langchain(file_path, chunk_size=500, chunk_overlap=50):
 
 # Upload chunks to Azure Search
 def upload_chunks_to_search():
-    data_dir = "C:\\Users\\REISHIKA GHOSH\\Downloads\\RAG\\RAG\\data"
+    data_dir = "data"
     for filename in os.listdir(data_dir):
         if filename.endswith(".pdf"):
             file_path = os.path.join(data_dir, filename)
