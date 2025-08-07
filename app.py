@@ -171,10 +171,7 @@ if user_input:
             response_source = "System"
         else:
             if st.session_state.chat_mode == "general":
-                bot_reply = answer_with_web_search.invoke({
-                    "query": user_input,
-                    "mode": response_mode.lower()
-                }) or "Sorry, couldn't find information on the web."
+                bot_reply = answer_with_web_search(user_input,mode=response_mode.lower()) or "Sorry, couldn't find information on the web."
                 response_source = "Web Search"
             else:
                 kb_result = answer_with_knowledge_base(user_input, mode=response_mode.lower())
@@ -182,10 +179,7 @@ if user_input:
                 classification = classify_response_and_relevance(kb_response, user_input)
 
                 if classification["response_class"] == "negative" and classification["is_relevant"] == "yes":
-                    bot_reply = answer_with_web_search.invoke({
-                        "query": user_input,
-                        "mode": response_mode.lower()
-                    }) or "Sorry, couldn't find anything in policy documents or web."
+                    bot_reply = answer_with_web_search(user_input,mode= response_mode.lower()) or "Sorry, couldn't find anything in policy documents or web."
                     response_source = "Web Search"
                 else:
                     bot_reply = kb_response
