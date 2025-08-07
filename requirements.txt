@@ -18,3 +18,4 @@ azure-core
 tavily-python
 markdown
 rapidfuzz
+pypdf
