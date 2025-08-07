@@ -13,15 +13,6 @@ load_dotenv()
 AZURE_SPEECH_KEY = os.getenv("AZURE_SPEECH_KEY")
 AZURE_REGION = os.getenv("AZURE_REGION")
 
-from models.embeddings import create_index_if_not_exists, upload_chunks_to_search
-
-# --- Initialize embedding index only once per session ---
-if "embedding_index_created" not in st.session_state:
-    print("Creating embedding index...")
-    create_index_if_not_exists()
-    upload_chunks_to_search()
-    st.session_state.embedding_index_created = True
-
 # ---- Styling ----
 st.markdown(f"""
     <style>
