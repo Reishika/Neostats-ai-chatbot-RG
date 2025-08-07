@@ -29,7 +29,6 @@ Given the chatbot's response and the user's original query, perform the followin
    - "Not found in the knowledge base"
    - "not explicitly mentioned"
    - "Cannot answer"
-   - Any wording that expresses limitation or uncertainty.
    - "The context provided does not include any information "
 
 2. **Classify whether the user query is related to banking or insurance.**
