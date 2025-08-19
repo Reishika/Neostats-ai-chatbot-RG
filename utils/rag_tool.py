@@ -90,7 +90,7 @@ def answer_with_knowledge_base(query: str, mode: str = "concise") -> str:
             return "I don't know based on the knowledge base."
 
 
-        if any(word in query.lower() for word in ["age", "eligible", "avail", "child", "adult", "senior"]):
+        if any(word in query.lower() for word in ["age", "eligible", "avail","policy", "child", "adult", "senior"]):
             eligible_chunks = [c for c in chunks if c["label"] == "eligibility"]
             if eligible_chunks:
                 chunks_to_use = eligible_chunks
